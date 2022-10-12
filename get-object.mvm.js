@@ -14,7 +14,7 @@ function createObject() {
 }
 
 function setProp(obj, prop, val) {
-  console.log("set property " + prop + " to " + val);
+  // console.log("set property " + prop + " to " + val);
   obj[prop] = val;
 }
 

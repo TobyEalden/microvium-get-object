@@ -112,13 +112,13 @@ mvm_TeError getResource(mvm_VM *vm, mvm_HostFunctionID funcId,
         return err;
     }
 
-    mvm_Value propName = mvm_newString(vm, "name", 5);
-    mvm_Value propValue = mvm_newString(vm, "Toby", 5);
+    mvm_Value propName = mvm_newString(vm, "name", 4);
+    mvm_Value propValue = mvm_newString(vm, "Toby", 4);
 
-    mvm_Value *setPropArgs[3] = {resourceObj, &propName, &propValue};
+    mvm_Value setPropArgs[3] = {*resourceObj, propName, propValue};
 
     mvm_Value propResult;
-    if ((err = mvm_call(vm, setProp, &propResult, *setPropArgs, 3)) !=
+    if ((err = mvm_call(vm, setProp, &propResult, setPropArgs, 3)) !=
         MVM_E_SUCCESS) {
         std::cout << "mvm failure calling setProp: " << err << std::endl;
         return err;

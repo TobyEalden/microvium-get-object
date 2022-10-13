@@ -6,7 +6,8 @@ function main() {
 
   const res = getResource("@root");
 
-  console.log(res.name);
+  // Temporary work-around for microvium bug, see https://github.com/coder-mike/microvium/issues/41#issuecomment-1276722406.
+  console.log(res["n" + "ame"]);
 }
 
 function createObject() {

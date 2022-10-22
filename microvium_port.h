@@ -118,7 +118,7 @@ fixes and improvement from the original github or npm repository.
  * This is _beyond_ the basic version and CRC checks that are done upon loading,
  * and should only be enabled if you expect bugs in the bytecode compiler.
  */
-#define MVM_DONT_TRUST_BYTECODE 1
+#define MVM_DONT_TRUST_BYTECODE 0
 
 /**
  * Not recommended!
@@ -129,7 +129,7 @@ fixes and improvement from the original github or npm repository.
  * shifts the address space a little to invalidate native pointers early.
  * This option is only intended for testing purposes.
  */
-#define MVM_VERY_EXPENSIVE_MEMORY_CHECKS 0
+#define MVM_VERY_EXPENSIVE_MEMORY_CHECKS 1
 
 /**
  * A long pointer is a type that can refer to either ROM or RAM. It is not size
